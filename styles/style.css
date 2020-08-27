@@ -1,0 +1,22 @@
+.box{
+    width: 200px;
+    height: 200px;
+    background: blue;
+}
+.box2{
+    width: 200px;
+    height: 200px;
+    background: green;
+}
+.caja{
+    display: grid;
+    grid-template-columns: repeat(4,200px);
+}
+.cajita{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    cursor: pointer;
+}
