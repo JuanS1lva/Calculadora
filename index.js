@@ -13,6 +13,9 @@ caja.addEventListener("click",(e)=>{
         if(Number.isNaN(parseFloat(e.target.innerText))){
             const temp = e.target.innerText;
             if(e.target.innerText=='='){
+                if(Number.isNaN(num1) || num1==''){
+                    num1='0';
+                }
                 switch (operacion) {
                     case '+':
                         resultado=parseFloat(num1)+parseFloat(num2);
@@ -51,7 +54,7 @@ caja.addEventListener("click",(e)=>{
                 realizado=true;
             }
             else if(e.target.innerText=='AC'){
-                teclado.value = '0'
+                teclado.innerHTML = '0'
                 num1='';
                 num2='';
             }
@@ -78,19 +81,16 @@ caja.addEventListener("click",(e)=>{
         else{
             if(!realizado){
                 if(operacion==''){
-                    const temp = e.target.innerText;
                     teclado.innerHTML = num1+e.target.innerText;
                     num1=num1+e.target.innerText;
                 }
                 else{
-                    const temp = e.target.innerText;
                     teclado.innerHTML = num2+e.target.innerText;
                     num2=num2+e.target.innerText;
                 }
             }
             else{
                 if(operacion==''){
-                    const temp = e.target.innerText;
                     teclado.innerHTML = e.target.innerText;
                     num1=e.target.innerText;
                     realizado=false;
@@ -98,48 +98,3 @@ caja.addEventListener("click",(e)=>{
             }
         }
 })
-/*
-
-let lista =document.getElementById("lista")
-let agregar =document.getElementById("agregar")
-agregar.addEventListener('click',()=>{
-    let texto = document.getElementById("listaAgregar").value;
-    let etiqueta = document.createElement("li");
-    etiqueta.textContent=texto;
-    lista.appendChild(etiqueta)
-})
------
-
-
-function cajaTexto(){
-    let name=prompt("Tu nombre");
-    document.write("<h1> Tu nombre es: "+ name +"</h1")
-}
-
-----
-
-let cuadro=document.getElementById("box");
-cuadro.addEventListener("mouseover",()=>{
-    cuadro.classList.replace("box","box2")
-})
-cuadro.addEventListener("mouseleave",()=>{
-    cuadro.classList.replace("box2","box")
-})
-cuadro.addEventListener("mousemove",()=>{
-    console.log("Muevoooooo")
-}) 
-
------
-
-    let teclado = document.getElementById("teclado")
-teclado.addEventListener("keydown",()=>{
-    console.log("Teclaaaa")
-})
-teclado.addEventListener("keyup",(e)=>{
-    console.log(e.key)
-    if(e.key == "w"){
-        console.log("Arriba")
-    }
-})
-
-*/
