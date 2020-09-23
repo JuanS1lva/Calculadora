@@ -5,6 +5,7 @@ let resultado=0;
 let realizado=false;
 let punto=false;
 let teclado = document.getElementById("teclado")
+let historial = document.getElementById("historial")
 teclado.addEventListener("keydown",()=>{
     
 })
@@ -58,23 +59,26 @@ caja.addEventListener("click",(e)=>{
       switch (operacion) {
         case '/':
             resultado=(parseFloat(num1))/(parseFloat(teclado.value));
+            historial.innerHTML += ` <h5> ${resultado} = ${num1} / ${teclado.value} </h5> `
             teclado.value=resultado;
             realizado=true;
           break;
           case 'X':
             resultado=(parseFloat(num1))*(parseFloat(teclado.value));
-            console.log(resultado+"="+num1+"*"+teclado.value)
+            historial.innerHTML += ` <h5> ${resultado} = ${num1} * ${teclado.value} </h5> `
             teclado.value=resultado;
             realizado=true;
           break;
           case '+':
             resultado=(parseFloat(num1))+(parseFloat(teclado.value));
+            historial.innerHTML += ` <h5> ${resultado} = ${num1} + ${teclado.value} </h5> `
             teclado.value=resultado;
             realizado=true;
             
           break;
           case '-':
             resultado=(parseFloat(num1))-(parseFloat(teclado.value));
+            historial.innerHTML += ` <h5> ${resultado} = ${num1} - ${teclado.value} </h5> `
             teclado.value=resultado;
             realizado=true;
           break;
@@ -97,23 +101,26 @@ caja.addEventListener("click",(e)=>{
           switch (operacion) {
             case '/':
                 resultado=(parseFloat(num1))/(parseFloat(teclado.value));
+                historial.innerHTML += ` <h5> ${resultado} = ${num1} / ${teclado.value} </h5> `
                 teclado.value=resultado;
                 realizado=true;
               break;
               case 'X':
                 resultado=(parseFloat(num1))*(parseFloat(teclado.value));
+                historial.innerHTML += ` <h5> ${resultado} = ${num1} * ${teclado.value} </h5> `
                 teclado.value=resultado;
                 realizado=true;
               break;
               case '+':
                 resultado=(parseFloat(num1))+(parseFloat(teclado.value));
-                console.log(resultado+"="+num1+"+"+teclado.value)
+                historial.innerHTML += ` <h5> ${resultado} = ${num1} + ${teclado.value} </h5> `
                 teclado.value=resultado;
                 realizado=true;
                 
               break;
               case '-':
                 resultado=(parseFloat(num1))-(parseFloat(teclado.value));
+                historial.innerHTML += ` <h5> ${resultado} = ${num1} - ${teclado.value} </h5> `
                 teclado.value=resultado;
                 realizado=true;
               break;
