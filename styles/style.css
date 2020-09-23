@@ -1,31 +1,4 @@
 *{
-    font-family: 'Orbitron', sans-serif;
+  font-family: 'Orbitron', sans-serif;
 }
-.caja{
-    padding-right: 10px;
-    display: grid;
-    grid-template-columns: repeat(4,100px);
-    font-size: 25px;
-}
-.cajita{
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background:grey ;
-    border-radius: 50%;
-}
-.cajita-opercaion{
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background:orange ;
-    border-radius: 50%;
-}
-.cajita-igual{
-    width: 400px;
-    height: 100px;
-}
+
